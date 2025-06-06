@@ -33,7 +33,7 @@ jobs:
         if: always()
         run: |
           mkdir playwright-report
-          npx cucumber-html-reporter --input cucumber-report.json --output playwright-report/index.html
+          node generate-html-report.js
 
       - name: Upload Playwright Report
         if: always()
